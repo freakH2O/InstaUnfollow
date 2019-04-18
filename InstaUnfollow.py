@@ -1,3 +1,4 @@
+base=input("Please Enter The link of your Instagram Id")
 import time
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
@@ -26,7 +27,7 @@ options.add_argument('user-data-dir= selenium')
 browser = webdriver.Chrome(chrome_options=options, executable_path=r'chromedriver.exe')
 
 while True:
-    browser.get('https://www.instagram.com/ring_one_pk/')
+    browser.get(base)
     tryy(browser.find_element_by_xpath('/html/body/span/section/main/div/header/section/ul/li[3]/a'))
     time.sleep(2)
     tryy(browser.find_element_by_xpath('/html/body/div[3]/div/div[2]/ul/div/li[1]/div/div[3]/button'))
